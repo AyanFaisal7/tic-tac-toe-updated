@@ -1,0 +1,100 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f0f0f;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 30px;
+}
+
+h1 {
+    color: #0ff;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #0ff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.container {
+    width: 340px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+.tiles {
+    width: 100px;
+    height: 100px;
+    background-color: #111;
+    border: 2px solid #333;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.tiles:hover:not(:disabled) {
+    box-shadow: 0 0 20px #0ff;
+    transform: scale(1.05);
+}
+
+
+.tiles:disabled {
+    color: #fff;
+}
+
+.r-btn, #new-game, #h-h, #c-h {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: transparent;
+    border: 2px solid #0ff;
+    color: #0ff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.r-btn:hover, #new-game:hover, #h-h:hover, #c-h:hover {
+    background-color: #0ff;
+    color: #000;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+
+.winner {
+    background-color: #1a1a1a;
+    border: 2px solid #0ff;
+    border-radius: 12px;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 0 15px #0ff;
+    display: none;
+}
+
+#winningCod {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+    margin-bottom: 10px;
+}
